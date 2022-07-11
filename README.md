@@ -7,15 +7,14 @@ git clone https://github.com/ibu123/recurrance-event.git
 cp .env-example .env
 composer install
 php artisan key:generate
-php artisan migrate
-php artisan db:seed
-
-npm install
-npm run prod
-
 ```
 
-please fill up database details in enviornment
+Please fill up database detail in enviorment
+```
+php artisan migrate
+php artisan db:seed
+```
+
 set google client id and secret in enviornment file
 ```
 GOOGLE_CLIENT_ID 
@@ -28,10 +27,9 @@ if application in sub folder don't foreget to set
 
 ```
 APP_URL 
-
 ```
 
-And in vue pass sub folder path in createWebHistory function inside resources\js\quiz.js file like below in createRouter function
+And in vue - pass sub folder path in createWebHistory function inside resources\js\quiz.js file like below in createRouter function
 
 ```
 history: createWebHistory("/laravel-vue-quiz/")
@@ -40,4 +38,6 @@ history: createWebHistory("/laravel-vue-quiz/")
 make sure to run below command and dont forget to set proper APP_URL
 ```
 php artisan ziggy:generate
+npm install
+npm run prod
 ```
